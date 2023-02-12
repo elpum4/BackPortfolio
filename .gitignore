@@ -1,4 +1,6 @@
 # Byte-compiled / optimized / DLL files
+
+docker-compose.yml
 __pycache__/
 *.py[cod]
 *$py.class
@@ -80,7 +82,6 @@ target/
 # IPython
 profile_default/
 ipython_config.py
-
 # pyenv
 .python-version
 
