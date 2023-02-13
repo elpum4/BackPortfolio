@@ -73,10 +73,8 @@ class SkillController(Skill, db.Model):
         # querying the database
         # for all the entries in it
         q = db.session.query(SkillController).filter(SkillController.id == id)
-        print(q)
         try:
             results = q.delete()
-            print(results)
             db.session.commit()
         except Exception as e:
             db.session.rollback()

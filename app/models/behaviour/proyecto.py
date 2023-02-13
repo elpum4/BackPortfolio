@@ -89,10 +89,8 @@ class ProyectoController(Proyecto, db.Model):
         q = db.session.query(ProyectoController).filter(
             ProyectoController.id == id
         )
-        print(q)
         try:
             results = q.delete()
-            print(results)
             db.session.commit()
         except Exception as e:
             db.session.rollback()

@@ -67,10 +67,8 @@ class ExpController(Experiencia, db.Model):
         # querying the database
         # for all the entries in it
         q = db.session.query(ExpController).filter(ExpController.id == id)
-        print(q)
         try:
             results = q.first()
-            print(results)
             db.session.commit()
         except Exception as e:
             db.session.rollback()
@@ -91,10 +89,8 @@ class ExpController(Experiencia, db.Model):
         # querying the database
         # for all the entries in it
         q = db.session.query(ExpController).filter(ExpController.id == id)
-        print(q)
         try:
             results = q.delete()
-            print(results)
             db.session.commit()
         except Exception as e:
             db.session.rollback()
